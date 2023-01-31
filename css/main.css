@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -12,6 +12,42 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+}
+
+/* Skip tag that includes a transition animation that w3school helped with and to skip to the main content of the article */
+#skiptocontent a {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:black;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	border-bottom-right-radius:8px;
+	background:aqua;
+	
+  -webkit-transition: top 0.5s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+
+#skiptocontent a:focus {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+	#skiptocontent a {
+		transition-duration: 0.001ms !important;
+	}
 }
 
 .container {
